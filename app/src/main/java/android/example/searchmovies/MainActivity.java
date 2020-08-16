@@ -92,13 +92,13 @@ public class MainActivity extends AppCompatActivity {
             task.cancel(true);
             task = new MovieQueryTask();
             task.execute(sortBy);
-            Toast.makeText(this, "Searching By Popular", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Searching By Popular", Toast.LENGTH_SHORT).show();
         } else {
             sortBy = "top_rated";
             task.cancel(true);
             task = new MovieQueryTask();
             task.execute(sortBy);
-            Toast.makeText(this, "Searching By Best Rating", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Searching By Best Rating", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }

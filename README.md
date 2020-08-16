@@ -4,6 +4,6 @@
 
 Kindly put your API_Key at NetWortUtils.java in     
 
-final static String PARAM_API_KEY = "put it here"
+final static String api_key = "put it here"
 
->>>>>>> 139afe4... new repo
+>>>>>>>

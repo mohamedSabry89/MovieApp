@@ -11,17 +11,17 @@ import java.util.Scanner;
 
 public class NetWortUtils {
 
-    final static String URL = "https://api.themoviedb.org/3/movie/";
+    final static String URL = "http://api.themoviedb.org/3/movie/";
     final static String PARAM_API_KEY = "api_key";
-    final static String api_key = "Write Your API_Key here";
+    final static String api_key = "Write your API KEY here";
     final static String PARAM_LANGUAGE = "language";
     final static String language = "en-US";
 
     public static URL buildUrl(String movieSearchQuery) {
         Uri buildUri = Uri.parse(URL).buildUpon()
+                .appendEncodedPath(movieSearchQuery)
                 .appendQueryParameter(PARAM_API_KEY, api_key)
                 .appendQueryParameter(PARAM_LANGUAGE, language)
-                .appendEncodedPath(movieSearchQuery)
                 .build();
 
         URL url = null;
